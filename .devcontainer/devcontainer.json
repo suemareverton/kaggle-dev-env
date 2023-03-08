@@ -1,0 +1,34 @@
+{
+    "name": "Kaggle Dev Enviroment",
+    "image": "gcr.io/kaggle-images/python",
+    "containerEnv": {
+      "KAGGLE_MODE": "DEV"
+    },
+    "mounts": [
+      "type=bind,source=${localWorkspaceFolder}/notebooks,target=/kaggle/working",
+      "type=bind,source=${localWorkspaceFolder}/data/input,target=/kaggle/input",
+      "type=bind,source=${localWorkspaceFolder}/data/output,target=/kaggle/output"
+    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "GitHub.copilot"
+        ],
+        "settings": {
+          "terminal.integrated.profiles.linux": {
+            "bash": {
+              "path": "bash",
+              "icon": "terminal-bash"
+            }
+          },
+          "python.pythonPath": "/opt/conda/bin/python"
+        },
+        "devPort": 8888
+      }
+    },
+    "postCreateCommand": ".devcontainer/setup.sh",
+    "postAttachCommand": ".devcontainer/setup-mounted.sh",
+    "shutdownAction": "none"
+  }
+  

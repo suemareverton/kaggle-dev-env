@@ -1,0 +1,27 @@
+{
+  "python.defaultInterpreterPath": "/opt/conda/bin/python",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/opt/conda/bin/black",
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "99"
+  ],
+  "editor.defaultFormatter": "ms-python.python",
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "[python]": {
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true
+}
